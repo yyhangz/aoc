@@ -5,7 +5,7 @@ def get_length(node, planet):
             total_orbits += node
             get_length(node+1, str(item))
         except KeyError:
-            pass
+            print(f"branch ended at {item}, node is {node}")
         
 
 filename = 'd6_input'
