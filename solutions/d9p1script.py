@@ -3,7 +3,7 @@ filename = 'd9_input'
 with open(filename, 'r') as f:
     code = list(map(int,f.read().split(",")))
 
-input_val,x, rbase = 1, 0, 0
+input_val, x, rbase = 1, 0, 0
 while True:
     # Exit intcode if opcode is 99
     if code[x] == 99:
@@ -32,7 +32,7 @@ while True:
                 for i in range(int(addr[y] - len(code))):
                     code.append(0)
 
-
+        # Run opcode 1-9
         if opcode == 1:
             code[addr[2]] = int(code[addr[0]] + code[addr[1]])
             x += 4
@@ -77,7 +77,5 @@ while True:
         elif opcode == 9:
             rbase += code[addr[0]]
             x += 2
-
-
         else:
             print(f"Invalid instruction: {instruc}")
