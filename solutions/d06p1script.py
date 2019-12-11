@@ -8,7 +8,7 @@ def get_length(node, planet):
             print(f"branch ended at {item}, node is {node}")
         
 
-filename = 'd6_input'
+filename = 'd06_input'
 with open(filename, 'r') as f:
 
     orbits = f.readlines()

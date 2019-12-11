@@ -1,4 +1,4 @@
-filename = 'd2_input.txt'
+filename = 'd02_input.txt'
 
 with open(filename, 'r') as f:
 

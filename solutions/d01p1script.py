@@ -1,4 +1,4 @@
-filename = 'd1_input.txt'
+filename = 'd01_input.txt'
 
 adder  = 0
 

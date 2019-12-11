@@ -1,6 +1,6 @@
 from itertools import permutations 
 
-filename = 'd7_input'
+filename = 'd07_input'
 
 with open(filename, 'r') as f:
 

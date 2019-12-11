@@ -1,4 +1,4 @@
-filename = 'd8_input'
+filename = 'd08_input'
 
 with open(filename, 'r') as f:
 

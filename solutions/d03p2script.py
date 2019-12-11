@@ -15,7 +15,7 @@ def update_grid(instruc, current, xborder, yborder):
         if yborder[0] > current[1]: yborder[0] = current[1]
 
 
-filename = 'd3_input.txt'
+filename = 'd03_input.txt'
 
 with open(filename, 'r') as f:
 
@@ -34,17 +34,20 @@ grid = [[0] * (yborder[1] - yborder[0] + 1) for i in range(xborder[1] - xborder[
 # Map out cable 1 on grid
 new_x, new_y = abs(xborder[0]), abs(yborder[0])
 current = [new_x, new_y] # Offset origin to fit grid
+count = 1
 for instruc in cable_one:
     length = int(instruc[1:])
     move_dir = dir[instruc[0]]//3 # Account for whether it is moving in x or y axis
     for i in range(length):
         step = ((-1)**dir[instruc[0]])*(i+1) # Determine if you move in positive or negative direction
         x, y = (current[0]) + (abs(move_dir - 1) * step), (current[1]) + (move_dir * step) # Find x and y coordinates on grid
-        grid[x][y] = 1
+        if grid[x][y] == 0: grid[x][y] = count
+        count += 1
     update_grid(instruc, current, xborder, yborder) # Update current point on grid
 
 current = [abs(xborder[0]), abs(yborder[0])] # Offset origin to fit grid
 min_dist = 0
+count = 1
 for instruc in cable_two:
     length = int(instruc[1:])
     move_dir = dir[instruc[0]]//3 # Account for whether it is moving in x or y axis
@@ -52,12 +55,13 @@ for instruc in cable_two:
         step = ((-1)**dir[instruc[0]])*(i+1) # Determine if you move in positive or negative direction
         x, y = (current[0]) + (abs(move_dir - 1) * step), (current[1]) + (move_dir * step) # Find x and y coordinates on grid
         try:
-            if grid[x][y] == 1:
-                cur_dist = abs(x - new_x) + abs(y - new_y)
+            if grid[x][y] > 0:
+                cur_dist = grid[x][y] + count
                 if min_dist == 0 or cur_dist<min_dist:
                     min_dist = cur_dist
         except IndexError:
             pass
+        count += 1
     update_grid(instruc, current, xborder, yborder) # Update current point on grid
 
 print(min_dist)

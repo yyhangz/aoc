@@ -1,7 +1,7 @@
 def output_val(number):
     print(f"output: {number}")
 
-filename = 'd5_input.txt'
+filename = 'd05_input.txt'
 
 with open(filename, 'r') as f:
 

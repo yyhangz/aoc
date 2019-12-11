@@ -8,7 +8,7 @@ def fuelcal(i):
 
 
 if __name__ == '__main__':
-    filename = 'd1_input.txt'
+    filename = 'd01_input.txt'
 
     adder  = 0
 

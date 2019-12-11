@@ -1,4 +1,4 @@
-filename = 'd9_input'
+filename = 'd09_input'
 
 with open(filename, 'r') as f:
     code = list(map(int,f.read().split(",")))
