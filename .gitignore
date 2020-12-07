@@ -3,3 +3,5 @@
 
 #ignore json
 .vscode/settings.json
+
+test.*
