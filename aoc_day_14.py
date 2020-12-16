@@ -1,5 +1,3 @@
-from itertools import product
-
 with open("aoc_day_14_input.txt", 'r') as f:
     lines = [line.rstrip() for line in f.read().splitlines()]
 
@@ -37,4 +35,4 @@ for line in lines:
 
 
 print("part 1: " + str(sum([mem[key] for key in mem.keys()])))
-print("part 2: " + str(sum([mem2[key] for key in mem2.keys()]))) #4753238784664
+print("part 2: " + str(sum([mem2[key] for key in mem2.keys()])))
