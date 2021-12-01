@@ -2,3 +2,11 @@ authen_code.txt
 test.py
 testing.py
 **/__pycache__
+
+# ignore executables
+*.exe
+
+#ignore json
+.vscode/settings.json
+
+test.*
