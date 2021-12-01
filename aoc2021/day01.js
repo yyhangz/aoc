@@ -31,7 +31,6 @@ const part2 = async () => {
    }
 
    return result;
-
 }
 
 part1().then(result => console.log(result));
