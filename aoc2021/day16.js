@@ -1,8 +1,8 @@
 const reader = require('./reader');
 const fname = 'day16.in';
 
-hexToBin = hex => hex.split("").map(x => parseInt(x, 16).toString(2).padStart(4, "0")).join("");
-binToDec = bin => parseInt(bin, 2);
+const hexToBin = hex => hex.split("").map(x => parseInt(x, 16).toString(2).padStart(4, "0")).join("");
+const binToDec = bin => parseInt(bin, 2);
 
 const parseLiteral = input => {
     const result = {};
