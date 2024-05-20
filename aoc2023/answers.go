@@ -1,7 +1,7 @@
 package main
 
 import (
-	day02 "aoc2023/day02"
+	day03 "aoc2023/day03"
 	"bufio"
 	"fmt"
 	"os"
@@ -37,7 +37,7 @@ func getLines(fname string) []string {
 }
 
 func main() {
-	content := getLines("./day02/day02.in")
-	fmt.Println(day02.Part01(content))
-	fmt.Println(day02.Part02(content))
+	content := getLines("./day03/day03.in")
+	fmt.Println(day03.Part01(content))
+	fmt.Println(day03.Part02(content))
 }
